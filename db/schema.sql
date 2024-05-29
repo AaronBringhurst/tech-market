@@ -10,13 +10,13 @@ CREATE DATABASE ecommerce_db;
 -- CREATE CATEGORY TABLE
 CREATE TABLE Category (
   id SERIAL PRIMARY KEY,
-  category_name VARCHAR(255) NOT NULL
+  category_name VARCHAR(69) NOT NULL
 );
 
 -- CREATE PRODUCT TABLE
 CREATE TABLE Product (
   id SERIAL PRIMARY KEY,
-  product_name VARCHAR(255) NOT NULL,
+  product_name VARCHAR(69) NOT NULL,
   price DECIMAL NOT NULL CHECK (price > 0),
   stock INTEGER NOT NULL DEFAULT 10 CHECK (stock >= 0),
   category_id INTEGER NOT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE Product (
 -- CREATE TAG TABLE
 CREATE TABLE Tag (
   id SERIAL PRIMARY KEY,
-  tag_name VARCHAR(255)
+  tag_name VARCHAR(69)
 );
 
 -- CREATE PRODUCTTAG TABLE
