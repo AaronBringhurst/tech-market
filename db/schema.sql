@@ -34,6 +34,6 @@ CREATE TABLE ProductTag (
   id SERIAL PRIMARY KEY,
   product_id INTEGER NOT NULL,
   tag_id INTEGER NOT NULL,
-  FOREIGN KEY (product_id) REFERENCES Product(id),
+  FOREIGN KEY (product_id) REFERENCES Product(id) ON DELETE CASCADE,
   FOREIGN KEY (tag_id) REFERENCES Tag(id)
 );
