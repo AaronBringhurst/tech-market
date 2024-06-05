@@ -14,8 +14,8 @@ The E-Commerce Backend is a server-side application that simulates the backend o
 
 ## Installation
 To get started, clone the repository and install the necessary dependencies:
-git clone https://github.com/AaronBringhurst/E-Commerce-Backend
-cd E-Commerce-Backend
+git clone https://github.com/AaronBringhurst/tech-market
+cd tech-market
 npm install
 
 Ensure that PostgreSQL is installed on your system. Update the .env file in the root directory with your database credentials.
