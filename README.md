@@ -6,6 +6,7 @@ The E-Commerce Backend is a server-side application that simulates the backend o
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
+- [Video](#video)
 - [API Routes](#api-routes)
 - [Technologies](#technologies)
 - [License](#license)
@@ -28,6 +29,10 @@ npm start
 ## Usage
 
 Once the application is running, you can use any API client like Postman or Insomnia to interact with the API. The application allows for CRUD operations on products, categories, and tags.
+
+## Video
+
+Watch a video demonstration of the project [here]().
 
 ### API Routes
 

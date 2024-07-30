@@ -1,29 +1,8 @@
-// import important parts of sequelize library
-const { Model, DataTypes } = require('sequelize');
-// import our database connection from config.js
-const sequelize = require('../config/connection');
-
-// Initialize Product model (table) by extending off Sequelize's Model class
 class Product extends Model {}
 
-// set up fields and rules for Product model
-Product.init(
-  {
-    // define columns
-  },
-  {
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'product',
-  }
-);
 
-// set up fields and rules for Product model
 Product.init(
   {
-    // define columns
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -35,18 +14,18 @@ Product.init(
       allowNull: false
     },
     price: {
-      type: DataTypes.DECIMAL(10, 2),
+      type: DataTypes.DECIMAL,
       allowNull: false,
       validate: {
-        isDecimal: true // this validation ensures the price is a decimal
+        isDecimal: true
       }
     },
     stock: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 10, // sets a default value of 10
+      defaultValue: 10,
       validate: {
-        isNumeric: true // this validation ensures the stock is a numeric value
+        isNumeric: true
       }
     },
     category_id: {
@@ -55,7 +34,7 @@ Product.init(
         model: 'category',
         key: 'id'
       },
-      onDelete: 'CASCADE' // ensures all products are deleted when the associated category is deleted
+      onDelete: 'CASCADE'
     }
   },
   {
